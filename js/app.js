@@ -18,12 +18,20 @@ createApp({
                     done: false,
                 },
             ],
+            newTaskValue: '',
         }
     },
     methods: {
         onClickCancel(index) {
            console.log("onclickcancel", index, this.tasks[index])
            this.tasks.splice(index, 1)
+        },
+        onClickAdd(newTaskValue) {
+            let newTask = {
+                text: this.newTaskValue,
+                done: false,
+            }
+            this.tasks.push(newTask)
         }
     }
 }).mount('#app')

@@ -25,7 +25,18 @@
 
                 <div class="card w-50 mx-auto">
 
-                    <ul class="list-group">
+                    <div class="mb-3 p-3 d-flex flex-column align-items-center">
+                        <h2>AGGIUNGI UNA NUOVA TASK</h2>
+
+                        <textarea v-model="newTaskValue" class="form-control d-inline-block" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        <button @click="onClickAdd(newTaskValue)" class="add-btn">
+                            AGGIUNGI TASK
+                        </button>
+                    </div>
+
+                    <ul class="list-group p-3">
+                        <h2 class="text-center">TO DO</h2>
+
                         <li v-for="(task, index) in tasks" class="list-group-item d-flex">
                           <input v-model="task.done" class="form-check-input me-2 checkbox" type="checkbox" value="" id="firstCheckbox">
                           <label :class="task.done === true ? 'done-task': '' " class="form-check-label task-label" for="firstCheckbox">{{task.text}}</label>
