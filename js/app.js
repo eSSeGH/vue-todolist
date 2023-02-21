@@ -15,18 +15,20 @@ createApp({
                 },
                 {
                     text: "Entrare su discord coi raga",
-                    done: false
-                }
-            ]
+                    done: true
+                },
+            ],
         }
-    }
+    },
     methods: {
-        isDone() {
-            if (this.tasks.done === true) {
-                return true
-            } else {
-                return false
-            }
-        }
+        // isDone(task) {
+        //     if (this.tasks[task].done === true) {
+        //         console.log("this task is DONE")
+        //         return true
+        //     } else {
+        //         console.log("this task is NOT done")
+        //         return false
+        //     }
+        // }
     }
 }).mount('#app')
