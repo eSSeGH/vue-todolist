@@ -6,3 +6,14 @@ ul {
 .done-task {
     text-decoration-line: line-through;
 }
+
+.form-check-label.task-label {
+    width: 60%;
+}
+
+.cancel-btn {
+    margin-left: auto;
+    background-color: white;
+    border: none;
+    color: red;
+}

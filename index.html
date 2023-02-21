@@ -26,9 +26,12 @@
                 <div class="card w-50 mx-auto">
 
                     <ul class="list-group">
-                        <li v-for="(task, index) in tasks" class="list-group-item">
-                          <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-                          <label class="form-check-label" :class="task.done === true ? 'done-task' : '' " for="firstCheckbox">{{task.text}}</label>
+                        <li v-for="(task, index) in tasks" class="list-group-item d-flex">
+                          <input v-model="task.done" class="form-check-input me-2 checkbox" type="checkbox" value="" id="firstCheckbox">
+                          <label :class="task.done === true ? 'done-task': '' " class="form-check-label task-label" for="firstCheckbox">{{task.text}}</label>
+                          <button @click="onClickCancel(index)" class="d-inline-block cancel-btn">
+                            <i class="fa-regular fa-circle-xmark"></i>
+                          </button>
                         </li>
                       </ul>
     

@@ -7,28 +7,23 @@ createApp({
             tasks: [
                 {
                     text: "Pushare ogni 30 min",
-                    done: false
+                    done: false,
                 },
                 {
                     text: "Respirare",
-                    done: false
+                    done: false,
                 },
                 {
                     text: "Entrare su discord coi raga",
-                    done: true
+                    done: false,
                 },
             ],
         }
     },
     methods: {
-        // isDone(task) {
-        //     if (this.tasks[task].done === true) {
-        //         console.log("this task is DONE")
-        //         return true
-        //     } else {
-        //         console.log("this task is NOT done")
-        //         return false
-        //     }
-        // }
+        onClickCancel(index) {
+           console.log("onclickcancel", index, this.tasks[index])
+           this.tasks.splice(index, 1)
+        }
     }
 }).mount('#app')
